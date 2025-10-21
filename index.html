@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aasif & Zeenat Wedding</title>
-<meta align="center" name="description" content="Join us in celebrating the wedding of Aasif and Zeenat.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 <style>
 body {
@@ -12,65 +11,73 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #fff8f0;
   color: #3a2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* breathing space around entire content */
+  box-sizing: border-box;
 }
-
-a { text-decoration: none; }
 
 /* --- Hero Section --- */
 .hero {
-  position: relative;
   width: 100%;
-  min-height: 60vh; /* keep spacing from before */
-  text-align: center;
-  padding: 30px 1px;
+  min-height: 90vh; /* almost full screen */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  text-align: center;
+  padding: 0 20px; /* space from screen edges */
+  box-sizing: border-box;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3em;
+  font-size: 2.5em;
   color: #bfa15e;
   margin: 0;
 }
 
 .hero p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 1em;
+  margin-top: 8px;
+  line-height: 1.3;
 }
 
-/* --- Event Sections (smaller) --- */
+/* --- Event Sections --- */
 .section {
-  max-width: 470px;
-  margin: 20px auto; /* keep spacing correct */
-  padding: 15px 1px; /* smaller padding */
+  width: 100%;
+  max-width: 480px; /* smaller for mobile */
+  margin: 15px auto;
+  padding: 15px 20px; /* extra padding for breathing room */
   background: #fdf5ec;
   border: 2px solid #f5e0b7;
   border-radius: 12px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  box-sizing: border-box;
 }
 
 .section h2 {
   font-family: 'Playfair Display', serif;
   color: #bfa15e;
-  font-size: 1.8em; /* smaller heading */
-  margin-bottom: 4px;
+  font-size: 1.6em;
+  margin-bottom: 6px;
 }
 
 .section p {
-  font-size: 1em; /* smaller text */
-  margin: 2px 0;
+  font-size: 0.95em;
+  margin: 3px 0;
 }
 
 .button {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 18px; /* smaller button */
+  margin-top: 10px;
+  padding: 10px 22px;
   background: #bfa15e;
   color: #fff;
   border-radius: 8px;
@@ -80,34 +87,21 @@ a { text-decoration: none; }
 .button:hover { background: #9c7c46; }
 
 /* --- Animations --- */
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
 .visible { opacity: 1 !important; transform: translateY(0) !important; }
 
-/* --- Floral Header --- */
-.flower-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 150px;
-  background: url('https://images.unsplash.com/photo-1605112227765-ec8335de0b87') center/cover no-repeat;
-  opacity: 0.25;
-  pointer-events: none;
-}
-
-/* --- Responsive --- */
-@media(min-width: 768px){
-  .hero h1 { font-size: 3.5em; }
-  .hero p { font-size: 1.3em; }
-  .section h2 { font-size: 2em; }
-  .section p { font-size: 1.1em; }
-  .button { font-size: 1em; padding: 10px 22px; }
+/* --- Responsive adjustments --- */
+@media(min-width: 480px){
+  .hero h1 { font-size: 3em; }
+  .hero p { font-size: 1.1em; }
+  .section h2 { font-size: 1.8em; }
+  .section p { font-size: 1em; }
+  .button { font-size: 1em; padding: 12px 24px; }
 }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="flower-header"></div>
   <h1>Aasif & Zeenat</h1>
   <p>We joyfully invite you to celebrate our wedding</p>
 </div>
