@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aasif & Zeenat Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* --- General Styles --- */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff8f0;
+  color: #3a2e2e;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --- Hero Section --- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(255,248,240,0.85), rgba(255,248,240,0.85)), url('https://images.unsplash.com/photo-1524594154508-8a319c2d3a5f') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  color: #bfa15e;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInUp 1s forwards 0.5s;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards 1s;
+}
+
+/* --- Event Sections --- */
+.section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  background: #fdf5ec;
+  border: 2px solid #f5e0b7;
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #bfa15e;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #bfa15e;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #9c7c46;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Scroll Animation --- */
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* --- Floral Header Decoration --- */
+.flower-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: url('https://images.unsplash.com/photo-1605112227765-ec8335de0b87') center/cover no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="flower-header"></div>
+  <h1>Aasif & Zeenat</h1>
+  <p>We invite you to celebrate our wedding</p>
+</div>
+
+<div class="section" data-delay="0.2s">
+  <h2>Haldi & Mehendi</h2>
+  <p>Date: 24 December</p>
+  <p>Time: [Add Time]</p>
+  <a href="#" class="button">View Venue</a>
+</div>
+
+<div class="section" data-delay="0.4s">
+  <h2>Nikah</h2>
+  <p>Date: 26 December</p>
+  <p>Time: [Add Time]</p>
+  <a href="#" class="button">View Venue</a>
+</div>
+
+<div class="section" data-delay="0.6s">
+  <h2>Dawat-e-Walima</h2>
+  <p>Date: [Add Date]</p>
+  <p>Time: [Add Time]</p>
+  <a href="#" class="button">View Venue</a>
+</div>
+
+<script>
+// Scroll animation
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold: 0.2});
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
